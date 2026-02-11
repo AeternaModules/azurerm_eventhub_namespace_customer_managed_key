@@ -12,7 +12,7 @@ EOT
   type = map(object({
     eventhub_namespace_id             = string
     key_vault_key_ids                 = set(string)
-    infrastructure_encryption_enabled = optional(bool, false)
+    infrastructure_encryption_enabled = optional(bool) # Default: false
     user_assigned_identity_id         = optional(string)
   }))
 }
