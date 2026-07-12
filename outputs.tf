@@ -1,3 +1,7 @@
+output "eventhub_namespace_customer_managed_keys_id" {
+  description = "Map of id values across all eventhub_namespace_customer_managed_keys, keyed the same as var.eventhub_namespace_customer_managed_keys"
+  value       = { for k, v in azurerm_eventhub_namespace_customer_managed_key.eventhub_namespace_customer_managed_keys : k => v.id }
+}
 output "eventhub_namespace_customer_managed_keys_eventhub_namespace_id" {
   description = "Map of eventhub_namespace_id values across all eventhub_namespace_customer_managed_keys, keyed the same as var.eventhub_namespace_customer_managed_keys"
   value       = { for k, v in azurerm_eventhub_namespace_customer_managed_key.eventhub_namespace_customer_managed_keys : k => v.eventhub_namespace_id }
