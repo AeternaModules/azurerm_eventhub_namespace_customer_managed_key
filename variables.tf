@@ -12,7 +12,7 @@ EOT
   type = map(object({
     eventhub_namespace_id             = string
     key_vault_key_ids                 = set(string)
-    infrastructure_encryption_enabled = optional(bool) # Default: false
+    infrastructure_encryption_enabled = optional(bool)
     user_assigned_identity_id         = optional(string)
   }))
   # --- Unconfirmed validation candidates, derived from azurerm_eventhub_namespace_customer_managed_key's provider source ---
